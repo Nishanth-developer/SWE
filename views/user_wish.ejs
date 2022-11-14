@@ -1,0 +1,91 @@
+<%-include("./partials/header")-%>
+<body class="bg-teal-100 font-Nunito">
+
+  <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-16">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <svg class="fill-current h-8 w-8 mr-2" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.1235 46L5 13H10.2222L13.1235 46H18.3457L29.3704 13H52L45.6173 16.4737H40.9753V39.0526L37.4938 46V16.4737H32.2716L18.3457 46H13.1235Z"/></svg>
+      <span class="font-semibold text-xl tracking-tight ">VIT Tradestation</span>
+    </div>
+    <div class="block lg:hidden">
+      <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns=".\assests\logo.svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+      </button>
+    </div>
+    <!-- <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-sm lg:flex-grow">
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Browse
+        </a>
+        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+          Cart
+        </a>
+        
+      </div>
+      
+    </div> -->
+    <div>
+      <a href="http://localhost:3000/" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Sell portal</a>
+    </div>
+  </nav>
+  
+
+    <div class="bg-white p-4 mb-6 mt-8">
+    <h1 class="font-bold text-2xl mb-2 ml-5 text-gray-900 "><%= category %></h1>
+     </div>
+    <div class="flex gap-x-20 gap-y-20 flex-wrap justify-start ml-20">
+      <% data.forEach(function(message){ %>
+  
+        <% if(message.category == category) { %>
+          <div class="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white">
+            <img class="w-96 min-w-full h-64" src="http://localhost:3000/images/uploaded_images/<%=message.image%>" alt="Sunset in the mountains">
+            <div class="px-6 py-4">
+              <div class="font-bold text-2xl mb-2"><%= message.product_name %></div>
+              <div class="text-lg mb-2">Sold by <span class="text-xl font-bold"><%= message.name %></span></div>
+              <p class="text-gray-700 text-base">
+                Time used : <span class="font-bold"><%= message.time_used %> months</span>
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2 bg-teal-600">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><%= message.category %></span>
+    
+              <% if (message.time_used < 3){ %>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">New</span>
+              <% } else if (message.time_used < 6) { %>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Used - likely new</span>
+              <% } else { %>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Used - old</span>
+              <% } %>
+    
+            </div>
+          
+          <form class="form-horizontal bg-teal-200" role="form" method="POST"  action="/carti" enctype="multipart/form-data">
+            <div  style="display: none;">
+              <input type="text" name="name" value="<%=message.name %>"> 
+              <input type="text" name="product_name" value="<%=message.product_name %>"> 
+              <input type="text" name="price" value="<%=message.price%>"> 
+              <input type="text" name="image" value="<%=message.image%>"> 
+              <input type="text" name="id" value="<%=message.id %>"> 
+              <input type="text" name="category" value="<%=message.category %>"> 
+              <input type="text" name="time_used" value="<%=message.time_used %>"> 
+            </div>
+    
+            <button class="mt-6 mb-4 shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-32" type="submit">
+              Buy Now
+            </button>
+          </form>
+          </div>
+        <% } %>
+          <% }) %>
+      </div>
+
+      
+
+
+
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>

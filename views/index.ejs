@@ -1,0 +1,188 @@
+<%-include("./partials/header")-%>
+  <body>
+
+
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-16">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.1235 46L5 13H10.2222L13.1235 46H18.3457L29.3704 13H52L45.6173 16.4737H40.9753V39.0526L37.4938 46V16.4737H32.2716L18.3457 46H13.1235Z"/></svg>
+        <span class="font-semibold text-xl tracking-tight">VIT Tradestation</span>
+      </div>
+      <div class="block lg:hidden">
+        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns=".\assests\logo.svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
+      </div>
+      <!-- <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Docs
+          </a>
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Examples
+          </a>
+          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+            Blog
+          </a>
+        </div>
+        <div>
+          <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Upload Portal</a>
+        </div>
+      </div> -->
+      <div>
+        <a href="http://localhost:3000/user_req" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Buy portal</a>
+      </div>
+    </nav>
+
+
+    <div class="ml-cent">
+      <div>
+        <div>                                     
+            <div>
+                 
+                <div>
+  
+                  <form class="w-full max-w-sm" role="form" method="POST" action="/" enctype="multipart/form-data">
+                      
+                      
+                      <div class="md:flex md:items-center mb-6">
+                        <div class="md:w-1/3">
+                          <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name">
+                            Seller Name
+                          </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="name" placeholder="Your name">
+                        </div>
+                      </div>
+  
+  
+                      <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="product_name">
+                              Product Name
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="product_name" placeholder="Product name">
+                          </div>
+                        </div>
+
+                        <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="category">
+                              Category
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="category" placeholder="category">
+                          </div>
+                        </div>
+
+                        <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="time_used">
+                              Time used
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="time_used" placeholder="time_used">
+                          </div>
+                        </div>
+
+                        <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="price">
+                              Price
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="price" placeholder="Price">
+                          </div>
+                        </div>
+
+
+  
+                      <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="mobile">
+                              Mobile Number
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="number" name="mobile" placeholder="Your number">
+                          </div>
+                        </div>
+  
+  
+                        <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="reg_no">
+                              Register number
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="reg_no" placeholder="Register no">
+                          </div>
+                        </div>
+                        
+  
+                        <div class="md:flex md:items-center mb-6">
+                          <div class="md:w-1/3">
+                            <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="email">
+                              VIT email
+                            </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="email" placeholder="Email">
+                          </div>
+                        </div>
+  
+  
+                        <div class="flex justify-center mt-8 ml-20">
+                          <div class="max-w-2xl rounded-lg shadow-xl bg-gray-50">
+                              <div class="m-4">
+                                  <label for="image" class="inline-block mb-2 text-gray-500">Image Upload</label>
+                                  <div class="flex items-center justify-center w-full">
+                                      <label
+                                          class="flex flex-col w-full h-32 border-4 border-blue-200 border-dashed hover:bg-gray-100 hover:border-gray-300">
+                                          <div class="flex flex-col items-center justify-center pt-7">
+                                              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-400 group-hover:text-gray-600"
+                                                  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                              </svg>
+                                              <p class="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
+                                                  Attach a file</p>
+                                          </div>
+                                          <input type="file" class="opacity-0" name="image" accept=""/>
+                                      </label>
+                                  </div>
+                              </div>
+                      
+                          </div>  
+                      </div>
+  
+                      <br>
+                      <br>
+                        
+                      <div class="md:flex md:items-center">
+                        <div class="md:w-1/3"></div>
+                        <div class="md:w-2/3">
+                          <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ml-20" type="submit">
+                            Sell
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+  
+  
+  
+                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
